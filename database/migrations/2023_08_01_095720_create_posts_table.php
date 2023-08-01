@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('meta_description', 255)->nullable();
             $table->datetime('published_at')->nullable();
             $table->foreignIdFor(\App\Models\User::class, 'user_id');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
